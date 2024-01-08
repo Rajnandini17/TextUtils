@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import TextForm from "./TextForm";
+import About from "./About";
 // import ReactDOM from "react-dom";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         <div className="container my-3">
         <TextForm heading="Enter the text to analyze"/>
         </div>
+        <About />
         
         </>
            
