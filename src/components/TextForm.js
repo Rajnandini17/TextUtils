@@ -21,6 +21,10 @@ export default function TextForm(props) {
         props.showAlert("Extra space is removed.");
     }
 
+    const handleTextSummary = () => {
+        props.showAlert("Your text has been summarized.");
+    }
+
     const handleClick = () => {
         let newText = ("");
         setText(newText);
@@ -44,6 +48,7 @@ export default function TextForm(props) {
         <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleLowClick}>Convert to LowerCase</button>
         <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleExtraSpace}>Remove Extra Space</button>
         <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleClick}>Clear Text</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleTextSummary}>Summarize Text</button>
         </div>
         <div className='container my-3' style={{color: props.mode==='dark'?'white':'#042743'}}>
             <h2>Your text summary</h2>
